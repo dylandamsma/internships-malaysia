@@ -1,13 +1,14 @@
-import React from 'react'
-import { Alert, Illustration } from '@kiwicom/orbit-components'
+import React from 'react';
+import Header from '../components/header';
+import Hero from '../components/hero';
+import JobList from '../components/jobs/joblist';
 
 export default () => {
   return (
-    <React.Fragment>
-      <Alert type="success" spaceAfter="large">
-        It Works!
-      </Alert>
-      <Illustration name="Success" />
-    </React.Fragment>
+    <>
+      <Header />
+      <Hero />
+      <JobList />
+    </>
   )
 }
