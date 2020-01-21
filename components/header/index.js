@@ -18,7 +18,7 @@ const Header = props => {
             <Container>
                 <Row justify="space-between">
                     <Col justify="middle" align="center">
-                        <Heading element="div" type="title2">StudentJobs</Heading>
+                        <Heading element="div" type="title2">InternsWin</Heading>
                     </Col>
                     <Col justify="flex-end" align="center">
                             <Link href="#">

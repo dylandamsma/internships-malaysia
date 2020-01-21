@@ -23,7 +23,7 @@ const Hero = props => {
                         align="center"
                     >
                         <Heading element="h1" type="display">
-                            Find the perfect part-time job for you
+                            Find the perfect internship for you
                         </Heading>
                         <Heading element="h2" type="displaySubtitle">
                             Because being an intern can be awesome.

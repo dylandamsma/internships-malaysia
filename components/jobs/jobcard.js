@@ -47,98 +47,23 @@ const JobCard = props => {
                         justify="start"
                     >
                         <CardInfo>
-                            <Heading element="h2" type="title2" spaceAfter="small">Senior Printing Intern</Heading>
+                            <Heading element="h2" type="title2" spaceAfter="small">{props.title}</Heading>
                             <Stack
                                 flex
                                 direction="row"
                                 justify="start"
                                 spaceAfter="large"
                             >
-                                <Text spaceAfter="large"> <Suitcase size="small" color="secondary" /> <Link href="#"><Textlink type="secondary">Foundingbird Sdn Bhd</Textlink></Link> </Text>
-                                <Text spaceAfter="large"> <Clock size="small" color="secondary" />  3 - 6 Months </Text>
+                                <Text spaceAfter="large"> <Suitcase size="small" color="secondary" /> <Link href="#"><Textlink type="secondary">{props.company}</Textlink></Link> </Text>
+                                <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
                             </Stack>
-                            <Text type="secondary" spaceAfter="large">Foundingbird is looking for a brave soldier who can man the printer, swiftly produce paper copies of digital documents and digitise even the most mundane of documents</Text>
-                            <Badge>Accounting</Badge> <Badge>Paid</Badge> <Badge>6 Months</Badge>
+                            <Text type="secondary" spaceAfter="large"> {props.description}</Text>
                         </CardInfo>
                     </Stack>
                 </Card>
             </Link>
         </Col>
 
-        <Col md="5">
-            <Card>
-                <Stack
-                    flex
-                    direction="row"
-                    justify="start"
-                >
-                    <CardInfo>
-                        <Heading element="h2" type="title2" spaceAfter="small">Senior Printing Intern</Heading>
-                        <Stack
-                            flex
-                            direction="row"
-                            justify="start"
-                            spaceAfter="large"
-                        >
-                            <Text spaceAfter="large"> <Suitcase size="small" color="secondary" /> <Link href="#"><Textlink type="secondary">Foundingbird Sdn Bhd</Textlink></Link> </Text>
-                            <Text spaceAfter="large"> <Clock size="small" color="secondary" />  3 - 6 Months </Text>
-                        </Stack>
-                        <Text type="secondary" spaceAfter="large">Foundingbird is looking for a brave soldier who can man the printer, swiftly produce paper copies of digital documents and digitise even the most mundane of documents</Text>
-                        <Badge>Accounting</Badge> <Badge>Paid</Badge> <Badge>6 Months</Badge>
-                    </CardInfo>
-                </Stack>
-            </Card>
-        </Col>
-
-        <Col md="5">
-            <Card>
-                <Stack
-                    flex
-                    direction="row"
-                    justify="start"
-                >
-                    <CardInfo>
-                        <Heading element="h2" type="title2" spaceAfter="small">Senior Printing Intern</Heading>
-                        <Stack
-                            flex
-                            direction="row"
-                            justify="start"
-                            spaceAfter="large"
-                        >
-                            <Text spaceAfter="large"> <Suitcase size="small" color="secondary" /> <Link href="#"><Textlink type="secondary">Foundingbird Sdn Bhd</Textlink></Link> </Text>
-                            <Text spaceAfter="large"> <Clock size="small" color="secondary" />  3 - 6 Months </Text>
-                        </Stack>
-                        <Text type="secondary" spaceAfter="large">Foundingbird is looking for a brave soldier who can man the printer, swiftly produce paper copies of digital documents and digitise even the most mundane of documents</Text>
-                        <Badge>Accounting</Badge> <Badge>Paid</Badge> <Badge>6 Months</Badge>
-                    </CardInfo>
-                </Stack>
-            </Card>
-        </Col>
-
-        <Col md="5">
-            <Card>
-                <Stack
-                    flex
-                    direction="row"
-                    justify="start"
-                >
-                    <CardInfo>
-                        <Heading element="h2" type="title2" spaceAfter="small">Senior Printing Intern</Heading>
-                        <Stack
-                            flex
-                            direction="row"
-                            justify="start"
-                            spaceAfter="large"
-                        >
-                            <Text spaceAfter="large"> <Suitcase size="small" color="secondary" /> <Link href="#"><Textlink type="secondary">Foundingbird Sdn Bhd</Textlink></Link> </Text>
-                            <Text spaceAfter="large"> <Clock size="small" color="secondary" />  3 - 6 Months </Text>
-                        </Stack>
-                        <Text type="secondary" spaceAfter="large">Foundingbird is looking for a brave soldier who can man the printer, swiftly produce paper copies of digital documents and digitise even the most mundane of documents</Text>
-                        <Badge>Accounting</Badge> <Badge>Paid</Badge> <Badge>6 Months</Badge>
-                    </CardInfo>
-                </Stack>
-            </Card>
-        </Col>
     </>
     )
 };
