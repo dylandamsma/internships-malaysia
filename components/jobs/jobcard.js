@@ -40,9 +40,7 @@ const CompanyLink = styled.a`
 
 const JobCard = props => {
     return (
-        // <>
 
-        // <Col md="5" >
                 <Card>
                     <Stack
                         flex
@@ -70,9 +68,7 @@ const JobCard = props => {
                         </CardInfo>
                     </Stack>
                 </Card>
-        // </Col>
 
-    // </>
     )
 };
 
