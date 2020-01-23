@@ -11,6 +11,8 @@ function fetcher(url) {
 
 const JobList = props => {
 
+    // TODO - Refactor this code to be fetched server-side through getInitialProps
+    
     const { data: jobs, error } = useSWR('/api/jobs', fetcher);
     // Fetches all the data from the URL `/api/jobs/` and returns it in JSON format
 

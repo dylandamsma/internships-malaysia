@@ -17,18 +17,12 @@ const Card = styled.div`
     position: relative;
     background: white;
     height: auto;
-    width: 780px;
+    width: 800px;
     box-shadow: 0 1px 6px 0 rgba(0,0,0,0.06);
     padding: 20px 30px;
     transition: all 300ms ease;
     border-radius: 3px;
     margin-bottom: 25px;
-    top: 0;
-
-    & :hover {
-        box-shadow: 0 3px 10px 0 rgba(0,0,0,0.12);
-        top: -3px;
-    }
 `;
 
 const CardInfo = styled.div`
@@ -41,11 +35,7 @@ const CompanyLink = styled.a`
 
 
 
-const JobCard = props => {
-
-    // Convert the job title to a slug
-    const compslug = paramCase(props.company);
-    const slug = paramCase(props.title) ;
+const JobDetails = props => {
 
     return (
 
@@ -56,11 +46,7 @@ const JobCard = props => {
                         justify="start"
                     >
                         <CardInfo>
-                            <Link href="/jobs/[slug]" as={`/jobs/${slug}`}>
-                                <a>
-                                    <Heading element="h2" type="title2" spaceAfter="small">{props.title}</Heading>
-                                </a>
-                            </Link>
+                            <Heading element="h2" type="title2" spaceAfter="small">{props.title}</Heading>
                             <Stack
                                 flex
                                 direction="row"
@@ -68,7 +54,7 @@ const JobCard = props => {
                                 spaceAfter="large"
                             >
                                 <Text spaceAfter="large"> 
-                                    <Suitcase size="small" color="secondary" /> <Link href={"/company/" + compslug}><a>{props.company}</a></Link> 
+                                    <Suitcase size="small" color="secondary" /> {props.company}
                                 </Text>
                                 <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
                             </Stack>
@@ -80,4 +66,4 @@ const JobCard = props => {
     )
 };
 
-export default JobCard;
+export default JobDetails;

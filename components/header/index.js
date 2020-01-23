@@ -33,7 +33,11 @@ const Header = props => {
                         align="center"
                     >
                             <Logo>
-                                <Heading element="div" type="title2">InternsWin</Heading>
+                                <Link href="/">
+                                    <a>
+                                        <Heading element="div" type="title2">InternsWin</Heading>
+                                    </a>
+                                </Link>
                             </Logo>
                             <Menu>
                                     <Stack
