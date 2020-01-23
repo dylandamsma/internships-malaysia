@@ -11,10 +11,15 @@ const Wrapper = styled.div`
     height: 64px;
 `;
 
+const NavBar = styled(NavigationBar)`
+    background: #000000;
+    height: 200px;
+`;
+
 const Header = props => {
     return (
     <Wrapper>
-        <NavigationBar>
+        <NavBar>
             <Container>
                 <Row justify="space-between">
                     <Col justify="middle" align="center">
@@ -36,7 +41,7 @@ const Header = props => {
                     </Col>
                 </Row>
             </Container>
-        </NavigationBar>
+        </NavBar>
     </Wrapper>
     )
 };
