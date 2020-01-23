@@ -16,7 +16,7 @@ const Card = styled.div`
     position: relative;
     background: white;
     height: auto;
-    width: 100%;
+    width: 780px;
     box-shadow: 0 1px 6px 0 rgba(0,0,0,0.06);
     padding: 20px 30px;
     transition: all 300ms ease;
@@ -42,7 +42,7 @@ const JobCard = props => {
     return (
         // <>
 
-        <Col md="5">
+        // <Col md="5" >
                 <Card>
                     <Stack
                         flex
@@ -70,7 +70,7 @@ const JobCard = props => {
                         </CardInfo>
                     </Stack>
                 </Card>
-        </Col>
+        // </Col>
 
     // </>
     )
