@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'react-awesome-styled-grid';
+// import { Container, Row, Col } from 'react-awesome-styled-grid';
 
 import TextLink from '@kiwicom/orbit-components/lib/TextLink';
 import Stack from '@kiwicom/orbit-components/lib/Stack';
@@ -10,7 +10,7 @@ import Badge from '@kiwicom/orbit-components/lib/Badge';
 
 import Suitcase from "@kiwicom/orbit-components/lib/icons/Suitcase";
 import Clock from "@kiwicom/orbit-components/lib/icons/Clock";
-import jobs from '../../pages/api/jobs';
+// import jobs from '../../pages/api/jobs';
 
 
 const Card = styled.div`
