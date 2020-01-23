@@ -9,6 +9,7 @@
   "dependencies": {
     "@kiwicom/orbit-components": "latest",
     "next": "latest",
+    "param-case": "^3.0.3",
     "react": "^16.7.0",
     "react-awesome-styled-grid": "^3.0.2",
     "react-dom": "^16.7.0",

@@ -3,6 +3,7 @@ import Loading from "@kiwicom/orbit-components/lib/Loading";
 import JobCard from './jobcard';
 import useSWR from 'swr';
 
+
 // Imports the data and converts the response to JSON if it isn't already :)
 function fetcher(url) {
   return fetch(url).then(r => r.json());
@@ -18,11 +19,12 @@ const JobList = props => {
 
     // Map each job to the JobCard component so we can show each job in the list
     const jobItems = jobs.map((job) => 
+
         <JobCard
             key={job.id}
             jobid={job.id}
             title={job.title}
-            company={job.company}
+            company={job.companyName}
             duration={job.duration}
             description={job.description}
         />

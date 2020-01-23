@@ -11,6 +11,7 @@ import Badge from '@kiwicom/orbit-components/lib/Badge';
 import Suitcase from "@kiwicom/orbit-components/lib/icons/Suitcase";
 import Clock from "@kiwicom/orbit-components/lib/icons/Clock";
 
+import { paramCase } from "param-case";
 
 const Card = styled.div`
     position: relative;
@@ -38,7 +39,14 @@ const CompanyLink = styled.a`
 
 `
 
+
+
 const JobCard = props => {
+
+    // Convert the job title to a slug
+    const compslug = "/" + paramCase(props.company);
+    const slug = paramCase(props.company) + "/" + paramCase(props.title) ;
+
     return (
 
                 <Card>
@@ -48,7 +56,7 @@ const JobCard = props => {
                         justify="start"
                     >
                         <CardInfo>
-                            <Link href={"/jobs/" + props.jobid}>
+                            <Link href={"/jobs/" + slug}>
                                 <a>
                                     <Heading element="h2" type="title2" spaceAfter="small">{props.title}</Heading>
                                 </a>
@@ -60,7 +68,7 @@ const JobCard = props => {
                                 spaceAfter="large"
                             >
                                 <Text spaceAfter="large"> 
-                                    <Suitcase size="small" color="secondary" /> <Link href="/#"><a>{props.company}</a></Link> 
+                                    <Suitcase size="small" color="secondary" /> <Link href={compslug}><a>{props.company}</a></Link> 
                                 </Text>
                                 <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
                             </Stack>
