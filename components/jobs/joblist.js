@@ -1,12 +1,6 @@
-// import Link from 'next/link';
-// import styled from 'styled-components';
 import { Container, Row, Col } from 'react-awesome-styled-grid';
-
 import Loading from "@kiwicom/orbit-components/lib/Loading";
-// import Text from '@kiwicom/orbit-components/lib/Text';
-
 import JobCard from './jobcard';
-
 import useSWR from 'swr';
 
 // Imports the data and converts the response to JSON if it isn't already :)
