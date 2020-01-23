@@ -1,6 +1,6 @@
 {
-  "name": "with-styled-components",
-  "version": "1.0.0",
+  "name": "internsite-malaysia",
+  "version": "0.0.1",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -16,8 +16,8 @@
     "swr": "^0.1.16"
   },
   "devDependencies": {
-    "@kiwicom/babel-plugin-orbit-components": "latest",
-    "babel-plugin-styled-components": "^1.8.0"
+    "@kiwicom/babel-plugin-orbit-components": "latest"
+    // "babel-plugin-styled-components": "^1.8.0"
   },
   "license": "ISC"
 }
