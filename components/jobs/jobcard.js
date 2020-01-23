@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Col } from 'react-awesome-styled-grid';
+import { Container, Row, Col } from 'react-awesome-styled-grid';
 
 import TextLink from '@kiwicom/orbit-components/lib/TextLink';
 import Stack from '@kiwicom/orbit-components/lib/Stack';
