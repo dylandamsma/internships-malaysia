@@ -41,7 +41,7 @@ singleJob.getInitialProps = async function(context) {
 
     const { id } = context.query;
 
-    const res = await fetch(`${basePath}/api/job?id=recD7jcBO9DklgoIe`);
+    const res = await fetch(`${basePath}/api/job?id=${id}`);
 	const jobPost = await res.json();
   
     return jobPost ? jobPost.data : {};
