@@ -7,6 +7,7 @@ import Stack from '@kiwicom/orbit-components/lib/Stack';
 import Heading from '@kiwicom/orbit-components/lib/Heading';
 import Text from '@kiwicom/orbit-components/lib/Text';
 import Badge from '@kiwicom/orbit-components/lib/Badge';
+import Markdown from 'markdown-to-jsx';
 
 import Suitcase from "@kiwicom/orbit-components/lib/icons/Suitcase";
 import Clock from "@kiwicom/orbit-components/lib/icons/Clock";
@@ -26,7 +27,7 @@ const Card = styled.div`
 `;
 
 const CardInfo = styled.div`
-    width: 80%;
+    margin: 20px 30px;
 `
 
 const CompanyLink = styled.a`
@@ -40,27 +41,21 @@ const JobDetails = props => {
     return (
 
         <Card>
-            <Stack
-                flex
-                direction="row"
-                justify="start"
-            >
-                <CardInfo>
-                    <Heading element="h2" type="title2" spaceAfter="small">{props.title}</Heading>
-                    <Stack
-                        flex
-                        direction="row"
-                        justify="start"
-                        spaceAfter="large"
-                    >
-                        <Text spaceAfter="large"> 
-                            <Suitcase size="small" color="secondary" /> {props.company}
-                        </Text>
-                        <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
-                    </Stack>
-                    <Text type="secondary" spaceAfter="large"> {props.description}</Text>
-                </CardInfo>
-            </Stack>
+            <CardInfo>
+                <Heading element="h1" type="title1" spaceAfter="small">{props.title}</Heading>
+                <Stack
+                    flex
+                    direction="row"
+                    justify="start"
+                    spaceAfter="large"
+                >
+                    <Text spaceAfter="large"> 
+                        <Suitcase size="small" color="secondary" /> {props.company}
+                    </Text>
+                    <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
+                </Stack>
+                <Text type="primary" spaceAfter="large"> <Markdown>{props.description}</Markdown> </Text>
+            </CardInfo>
         </Card>
 
     )

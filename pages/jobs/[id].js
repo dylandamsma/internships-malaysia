@@ -14,13 +14,15 @@ const singleJob = props => {
     return (
         <>
         <Header />
-        <Hero />
+        {/* <Hero /> */}
 
         <Container>
             <Row justify="center" align="middle">
                 {/* <Col xs="7" md="7" justify="space-between"> */}
                     <JobDetails 
-                        title={router.query.title}
+                        title={props.title}
+                        description={props.description}
+                        company={props.company}
                     />
                     <JobSidebar />
                 {/* </Col> */}

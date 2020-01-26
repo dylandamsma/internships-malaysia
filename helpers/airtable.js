@@ -74,7 +74,7 @@ module.exports = {
                         slug: record.get('slug'),
                         company: record.get('company'),
                         duration: record.get('durationText'),
-                        description: record.get('content'),
+                        description: record.get('description'),
                         featured: record.get('featured'),
                         publish_date: record.get('created_at'),
                         uuid: record.get('uuid')

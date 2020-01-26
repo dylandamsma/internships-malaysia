@@ -6,7 +6,7 @@ import Stack from '@kiwicom/orbit-components/lib/Stack';
 import Heading from '@kiwicom/orbit-components/lib/Heading';
 
 const Wrapper = styled.div`
-    padding: 25px 0;
+    padding: 0 0;
     // height: 40vh;
     margin-bottom: 25px;
 `;

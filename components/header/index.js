@@ -12,6 +12,7 @@ import Stack from '@kiwicom/orbit-components/lib/Stack';
 
 const Wrapper = styled.div`
     height: 64px;
+    margin-bottom: 50px;
 `;
 
 const Logo = styled.div`
