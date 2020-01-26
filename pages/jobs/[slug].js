@@ -31,7 +31,7 @@ const singleJob = props => {
   )
 }
 
-singleJob.getInitialProps = async function() {
+singleJob.getInitialProps = async function(context) {
     // const router = useRouter();
 
     const basePath =
@@ -39,12 +39,12 @@ singleJob.getInitialProps = async function() {
               ? `http://localhost:${process.env.PORT || 3000}`
               : process.env.SITE_URL
 
-    // const { id } = query.id
+    const { id } = context.query;
 
-    const res = await fetch(`${basePath}/api/job?id=recD7jcBO9DklgoIe`)
-	const jobPost = await res.json()
+    const res = await fetch(`${basePath}/api/job?id=recD7jcBO9DklgoIe`);
+	const jobPost = await res.json();
   
-    return jobPost ? jobPost.data : {}
+    return jobPost ? jobPost.data : {};
     
   };
 
