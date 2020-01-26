@@ -32,8 +32,6 @@ const singleJob = props => {
 }
 
 singleJob.getInitialProps = async function(context) {
-    // const router = useRouter();
-
     const basePath =
           process.env.NODE_ENV === 'development'
               ? `http://localhost:${process.env.PORT || 3000}`
