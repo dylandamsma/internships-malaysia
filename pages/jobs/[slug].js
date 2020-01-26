@@ -5,9 +5,10 @@ import Hero from '../../components/hero';
 import JobDetails from '../../components/jobs/details';
 import { Container, Row, Col } from 'react-awesome-styled-grid';
 import JobSidebar from '../../components/jobs/sidebar';
-import { getCountryProps } from '@kiwicom/orbit-components/lib/CountryFlag';
 
-export default () => {
+import fetch from 'isomorphic-unfetch';
+
+const singleJob = props => {
     const router = useRouter();
 
     return (
@@ -19,7 +20,7 @@ export default () => {
             <Row justify="center" align="middle">
                 {/* <Col xs="7" md="7" justify="space-between"> */}
                     <JobDetails 
-                        title={router.query.slug}
+                        title={router.query.title}
                     />
                     <JobSidebar />
                 {/* </Col> */}
@@ -29,3 +30,22 @@ export default () => {
         </>
   )
 }
+
+singleJob.getInitialProps = async function() {
+    // const router = useRouter();
+
+    const basePath =
+          process.env.NODE_ENV === 'development'
+              ? `http://localhost:${process.env.PORT || 3000}`
+              : process.env.SITE_URL
+
+    // const { id } = query.id
+
+    const res = await fetch(`${basePath}/api/job?id=recD7jcBO9DklgoIe`)
+	const jobPost = await res.json()
+  
+    return jobPost ? jobPost.data : {}
+    
+  };
+
+export default singleJob;

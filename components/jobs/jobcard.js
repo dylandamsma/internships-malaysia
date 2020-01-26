@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'react-awesome-styled-grid';
 
 import TextLink from '@kiwicom/orbit-components/lib/TextLink';
 import Stack from '@kiwicom/orbit-components/lib/Stack';
 import Heading from '@kiwicom/orbit-components/lib/Heading';
 import Text from '@kiwicom/orbit-components/lib/Text';
-import Badge from '@kiwicom/orbit-components/lib/Badge';
 
 import Suitcase from "@kiwicom/orbit-components/lib/icons/Suitcase";
 import Clock from "@kiwicom/orbit-components/lib/icons/Clock";
+
+import Markdown from 'markdown-to-jsx';
 
 import { paramCase } from "param-case";
 
@@ -44,8 +44,9 @@ const CompanyLink = styled.a`
 const JobCard = props => {
 
     // Convert the job title to a slug
-    const compslug = paramCase(props.company);
-    const slug = paramCase(props.title) ;
+    // const compslug = paramCase(props.company);
+    const id = props.id
+    const permalink = !!id ? `/jobs/${id}` : false
 
     return (
 
@@ -56,7 +57,8 @@ const JobCard = props => {
                         justify="start"
                     >
                         <CardInfo>
-                            <Link href="/jobs/[slug]" as={`/jobs/${slug}`}>
+                            {/* TODO - Pass Data to the single job page */}
+                            <Link href={id} as={`/jobs/${id}`}>
                                 <a>
                                     <Heading element="h2" type="title2" spaceAfter="small">{props.title}</Heading>
                                 </a>
@@ -68,11 +70,11 @@ const JobCard = props => {
                                 spaceAfter="large"
                             >
                                 <Text spaceAfter="large"> 
-                                    <Suitcase size="small" color="secondary" /> <Link href={"/company/" + compslug}><a>{props.company}</a></Link> 
+                                    <Suitcase size="small" color="secondary" /> <Link href={"/company/" + props.company}><a>{props.company}</a></Link> 
                                 </Text>
                                 <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
                             </Stack>
-                            <Text type="secondary" spaceAfter="large"> {props.description}</Text>
+                            <Text type="secondary" spaceAfter="large"> {props.short_desc}</Text>
                         </CardInfo>
                     </Stack>
                 </Card>

@@ -39,29 +39,29 @@ const JobDetails = props => {
 
     return (
 
-                <Card>
+        <Card>
+            <Stack
+                flex
+                direction="row"
+                justify="start"
+            >
+                <CardInfo>
+                    <Heading element="h2" type="title2" spaceAfter="small">{props.title}</Heading>
                     <Stack
                         flex
                         direction="row"
                         justify="start"
+                        spaceAfter="large"
                     >
-                        <CardInfo>
-                            <Heading element="h2" type="title2" spaceAfter="small">{props.title}</Heading>
-                            <Stack
-                                flex
-                                direction="row"
-                                justify="start"
-                                spaceAfter="large"
-                            >
-                                <Text spaceAfter="large"> 
-                                    <Suitcase size="small" color="secondary" /> {props.company}
-                                </Text>
-                                <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
-                            </Stack>
-                            <Text type="secondary" spaceAfter="large"> {props.description}</Text>
-                        </CardInfo>
+                        <Text spaceAfter="large"> 
+                            <Suitcase size="small" color="secondary" /> {props.company}
+                        </Text>
+                        <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
                     </Stack>
-                </Card>
+                    <Text type="secondary" spaceAfter="large"> {props.description}</Text>
+                </CardInfo>
+            </Stack>
+        </Card>
 
     )
 };
