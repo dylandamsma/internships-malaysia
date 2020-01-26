@@ -36,7 +36,7 @@ const Header = props => {
                             <Logo>
                                 <Link href="/">
                                     <a>
-                                        <Heading element="div" type="title2">InternsWin</Heading>
+                                        <Heading element="div" type="title2">InternsMalaysia</Heading>
                                     </a>
                                 </Link>
                             </Logo>
