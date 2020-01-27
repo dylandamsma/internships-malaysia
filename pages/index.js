@@ -43,7 +43,7 @@ Index.getInitialProps = async function() {
 			? `http://localhost:${process.env.PORT || 3000}`
 			: process.env.SITE_URL
 
-	const res = await fetch(`http://localhost:3000/api/jobs`);
+	const res = await fetch(`${basePath}/api/jobs`);
   const jobPosts = await res.json();
 
   return {
