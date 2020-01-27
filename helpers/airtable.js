@@ -26,11 +26,13 @@ module.exports = {
 					(records, fetchNextPage) => {
 						// Get the fields
 						records.forEach(record => {
+						
 							const post = {
 								id: record.id,
                                 title: record.get('title'),
                                 slug: record.get('slug'),
-                                company: record.get('company'),
+								company: record.get('brand_name'),
+								company_id: record.get('company'),
                                 duration: record.get('duration'),
                                 description: record.get('description'),
                                 short_desc: record.get('short_description'),
@@ -72,7 +74,8 @@ module.exports = {
 						// id: record.id,
                         title: record.get('title'),
                         slug: record.get('slug'),
-                        company: record.get('company'),
+                        company: record.get('brand_name'),
+						company_id: record.get('company'),
                         duration: record.get('duration'),
                         description: record.get('description'),
                         featured: record.get('featured'),

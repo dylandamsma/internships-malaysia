@@ -8,8 +8,9 @@ import JobSidebar from '../../components/jobs/sidebar';
 
 import fetch from 'isomorphic-unfetch';
 
-const singleJob = props => {
+const Company = props => {
     const router = useRouter();
+    const { id } = router.query.id;
 
     return (
         <>
@@ -20,10 +21,9 @@ const singleJob = props => {
             <Row justify="space-between" align="middle">
                 {/* <Col xs="7" md="7" justify="space-between"> */}
                     <JobDetails 
-                        title={props.title}
-                        description={props.description}
+                        title={ 'company ID = ' + router.query.id}
+                        description='test'
                         company={props.company}
-                        companyid={props.company_id}
                         duration={props.duration}
                         featured={props.featured}
                     />
@@ -36,19 +36,19 @@ const singleJob = props => {
   )
 }
 
-singleJob.getInitialProps = async function(context) {
-    const basePath =
-          process.env.NODE_ENV === 'development'
-              ? `http://localhost:${process.env.PORT || 3000}`
-              : process.env.SITE_URL
+// Company.getInitialProps = async function(context) {
+//     // const basePath =
+//     //       process.env.NODE_ENV === 'development'
+//     //           ? `http://localhost:${process.env.PORT || 3000}`
+//     //           : process.env.SITE_URL
 
-    const { id } = context.query;
+//     // const { id } = context.query;
 
-    const res = await fetch(`${basePath}/api/job?id=${id}`);
-	const jobPost = await res.json();
+//     // const res = await fetch(`${basePath}/api/job?id=${id}`);
+// 	// const jobPost = await res.json();
   
-    return jobPost ? jobPost.data : {};
+//     // return jobPost ? jobPost.data : {};
     
-  };
+//   };
 
-export default singleJob;
+export default Company;

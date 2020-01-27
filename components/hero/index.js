@@ -46,7 +46,7 @@ const Hero = props => {
                     >
                         <HeroText>
                             <H4>
-                                CURRENTLY IN BETA
+                                CURRENTLY IN DEVELOPMENT 👨‍💻
                             </H4>
                             <H1>
                                 Find a tech job in Malaysia<br /> that truly excites you

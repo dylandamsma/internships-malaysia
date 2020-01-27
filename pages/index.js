@@ -16,6 +16,7 @@ const Index = props => {
           title={job.title}
           slug={job.slug}
           company={job.company}
+          companyid={job.company_id}
           duration={job.duration}
           description={job.description}
           short_desc={job.short_desc}
@@ -46,6 +47,8 @@ Index.getInitialProps = async function() {
 
 	const res = await fetch(`${basePath}/api/jobs`);
   const jobPosts = await res.json();
+
+  // console.log(jobPosts);
 
   return {
     jobs: jobPosts.data

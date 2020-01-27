@@ -62,16 +62,21 @@ const JobCard = props => {
                     >
                         <CardInfo>
                             {/* TODO - Pass Data to the single job page */}
-                                    <Heading element="h2" type="title2" spaceAfter="small" inverted>{props.title}</Heading>
+                                    <Heading element="h2" type="title2" spaceAfter="small" inverted>
+                                    {props.featured === true &&
+                                    <span css={'color:white;margin-right:5px;'}>
+                                        👉 
+                                    </span>
+                                    }
+                                        {props.title}
+                                        
+                                    </Heading>
                             <Stack
                                 flex
                                 direction="row"
                                 justify="start"
                                 spaceAfter="large"
                             >
-                                <span css={'color:white'}>
-                                    {props.featured ? '* Featured' : ''}
-                                </span>
                                 <Text>
                                     <Suitcase size="small" color="secondary" /> {props.company}
                                 </Text>
