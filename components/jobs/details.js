@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-awesome-styled-grid';
 import TextLink from '@kiwicom/orbit-components/lib/TextLink';
 import Stack from '@kiwicom/orbit-components/lib/Stack';
 import Heading from '@kiwicom/orbit-components/lib/Heading';
-import Text from '@kiwicom/orbit-components/lib/Text';
+// import Text from '@kiwicom/orbit-components/lib/Text';
 import Badge from '@kiwicom/orbit-components/lib/Badge';
 import Markdown from 'markdown-to-jsx';
 
@@ -34,6 +34,11 @@ const CompanyLink = styled.a`
 
 `
 
+const Text = styled.article`
+    line-height: 1.4rem;
+    font-weight: 300;
+    color: #b5b5b5;
+`
 
 
 const JobDetails = props => {
@@ -54,7 +59,7 @@ const JobDetails = props => {
                     </Text>
                     <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
                 </Stack>
-                <Text type="primary" spaceAfter="large"> <Markdown>{props.description}</Markdown> </Text>
+                <Text> <Markdown>{props.description}</Markdown> </Text>
             </CardInfo>
         </Card>
 
