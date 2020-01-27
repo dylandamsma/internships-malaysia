@@ -18,6 +18,45 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const customGrid = {
+  mediaQuery: 'only screen',
+  columns: {
+    xs: 4,
+    sm: 8,
+    md: 8,
+    lg: 12,
+    xl: 12,
+  },
+  gutterWidth: {
+    xs: 1,
+    sm: 1,
+    md: 1.5,
+    lg: 1.5,
+    xl: 1.5,
+  },
+  paddingWidth: {
+    xs: 1,
+    sm: 1,
+    md: 1.5,
+    lg: 1.5,
+    xl: 1.5,
+  },
+  container: {
+    xs: 'full', // 'full' = max-width: 100%
+    sm: 'full', // 'full' = max-width: 100%
+    md: 'full', // 'full' = max-width: 100%
+    lg: 78, // max-width: 1440px
+    xl: 78, // max-width: 1440px
+  },
+  breakpoints: {
+    xs: 1,
+    sm: 48, // 768px
+    md: 64, // 1024px
+    lg: 90, // 1440px
+    xl: 120, // 1920px
+  },
+}
+
 const theme = {
   palette: {
     product: {
@@ -47,7 +86,7 @@ export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <ThemeProvider theme={{ orbit: tjm_theme }}>
+      <ThemeProvider theme={{ orbit: tjm_theme, awesomegrid: customGrid }}>
         <>
           <GlobalStyle />
           <Component {...pageProps} />

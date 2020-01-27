@@ -53,7 +53,7 @@ const Header = props => {
                             <Logo>
                                 <Link href="/">
                                     <a>
-                                        <Heading element="div" type="title2" inverted>TechJobsMY</Heading>
+                                        <Heading element="div" type="title2" inverted>TechJobsMY 🇲🇾</Heading>
                                     </a>
                                 </Link>
                             </Logo>
