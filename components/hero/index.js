@@ -5,6 +5,8 @@ import { Container, Row, Col } from 'react-awesome-styled-grid';
 import Stack from '@kiwicom/orbit-components/lib/Stack';
 import Heading from '@kiwicom/orbit-components/lib/Heading';
 
+import Fade from 'react-reveal/Fade';
+
 const Wrapper = styled.div`
     padding: 0 0;
     // height: 40vh;
@@ -45,12 +47,14 @@ const Hero = props => {
                         spaceAfter="large"
                     >
                         <HeroText>
+                            <Fade cascade duration={2500}>
                             <H4>
                                 CURRENTLY IN DEVELOPMENT 👨‍💻
                             </H4>
                             <H1>
                                 Find a tech job in Malaysia<br /> that truly excites you
                             </H1>
+                            </Fade>
                         </HeroText>
                     </Stack>
                 </Col>

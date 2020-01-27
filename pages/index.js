@@ -31,7 +31,7 @@ const Index = props => {
       <Hero />
       <Container>
         <Row justify="center">
-          {jobItems}
+            {jobItems}
         </Row>
       </Container>
     </>

@@ -13,6 +13,9 @@ import Markdown from 'markdown-to-jsx';
 
 import { paramCase } from "param-case";
 
+import Fade from 'react-reveal/Fade';
+
+
 const Card = styled.div`
     position: relative;
     background-color: ${props => props.featured ? "rgba(85,66,208,0.6)" : "rgba(52, 56, 68, 0.29)"};
@@ -52,6 +55,7 @@ const JobCard = props => {
     const permalink = !!id ? `/jobs/${id}` : false
 
     return (
+        <Fade bottom>
         <Link href='/jobs/[id]' as={`/jobs/${id}`}>
             <a>
                 <Card featured={props.featured}>
@@ -90,7 +94,7 @@ const JobCard = props => {
                 </Card>
             </a>
         </Link>
-
+    </Fade>
     )
 };
 
