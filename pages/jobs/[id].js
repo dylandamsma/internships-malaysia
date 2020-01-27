@@ -17,7 +17,7 @@ const singleJob = props => {
         {/* <Hero /> */}
 
         <Container>
-            <Row justify="center" align="middle">
+            <Row justify="space-between" align="middle">
                 {/* <Col xs="7" md="7" justify="space-between"> */}
                     <JobDetails 
                         title={props.title}

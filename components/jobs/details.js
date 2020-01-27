@@ -16,9 +16,9 @@ import { paramCase } from "param-case";
 
 const Card = styled.div`
     position: relative;
-    background: #1C1D1F;
+    background: rgba(52, 56, 68, 0.29);
     height: auto;
-    width: 800px;
+    width: 900px;
     box-shadow: 0 1px 6px 0 rgba(0,0,0,0.06);
     padding: 20px 30px;
     transition: all 300ms ease;
