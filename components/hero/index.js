@@ -8,7 +8,7 @@ import Heading from '@kiwicom/orbit-components/lib/Heading';
 const Wrapper = styled.div`
     padding: 0 0;
     // height: 40vh;
-    margin-bottom: 25px;
+    // margin-bottom: 25px;
 `;
 
 const HeroText = styled.div`
@@ -36,7 +36,7 @@ const Hero = props => {
     return (
     <Wrapper>
         <Container>
-            <Row style={{ height: 300 }} justify="center" align="middle">
+            <Row style={{ height: 400 }} justify="center" align="middle">
                 <Col justify="center" align="center">
                     <Stack 
                         direction="column"
@@ -49,7 +49,7 @@ const Hero = props => {
                                 CURRENTLY IN BETA
                             </H4>
                             <H1>
-                                We match tech talent with<br /> exciting malaysian ventures
+                                Find a tech job in Malaysia<br /> that truly excites you
                             </H1>
                         </HeroText>
                     </Stack>
