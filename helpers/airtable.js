@@ -73,7 +73,7 @@ module.exports = {
                         title: record.get('title'),
                         slug: record.get('slug'),
                         company: record.get('company'),
-                        duration: record.get('durationText'),
+                        duration: record.get('duration'),
                         description: record.get('description'),
                         featured: record.get('featured'),
                         publish_date: record.get('created_at'),

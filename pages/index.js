@@ -19,6 +19,7 @@ const Index = props => {
           duration={job.duration}
           description={job.description}
           short_desc={job.short_desc}
+          featured={job.featured}
       />
 
   );

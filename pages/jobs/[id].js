@@ -23,6 +23,8 @@ const singleJob = props => {
                         title={props.title}
                         description={props.description}
                         company={props.company}
+                        duration={props.duration}
+                        featured={props.featured}
                     />
                     <JobSidebar />
                 {/* </Col> */}

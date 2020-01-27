@@ -57,7 +57,7 @@ const JobDetails = props => {
                     <Text spaceAfter="large"> 
                         <Suitcase size="small" color="secondary" /> {props.company}
                     </Text>
-                    <Text spaceAfter="large"> <Clock size="small" color="secondary" />  {props.duration} </Text>
+                    <Text> <Clock size="small" color="secondary" /> {props.duration} </Text>
                 </Stack>
                 <Text> <Markdown>{props.description}</Markdown> </Text>
             </CardInfo>
