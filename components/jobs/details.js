@@ -54,13 +54,13 @@ const JobDetails = props => {
                     justify="start"
                     spaceAfter="large"
                 >
-                    <Link href='/companies/[id]' as={`/companies/${props.companyid}`}>
-                    <a>
+                    {/* <Link href='/companies/[id]' as={`/companies/${props.companyid}`}> */}
+                    {/* <a> */}
                     <Text spaceAfter="large"> 
                         <Suitcase size="small" color="secondary" /> {props.company}
                     </Text>
-                    </a>
-                    </Link>
+                    {/* </a> */}
+                    {/* </Link> */}
                     <Text> <Clock size="small" color="secondary" /> {props.duration} </Text>
                 </Stack>
                 <Text> <Markdown>{props.description}</Markdown> </Text>
