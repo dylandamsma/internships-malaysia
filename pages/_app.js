@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     background-color: #15151A;
   }
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const theme = {

@@ -23,6 +23,7 @@ const Card = styled.div`
     transition: all 300ms ease;
     border-radius: 3px;
     margin-bottom: 25px;
+    cursor: pointer; 
 
     & :hover {
         background-color: rgba(52, 56, 68, 0.4);
@@ -46,6 +47,8 @@ const JobCard = props => {
 
     return (
 
+        <Link href={id} as={`/jobs/${id}`}>
+            <a>
                 <Card>
                     <Stack
                         flex
@@ -54,11 +57,7 @@ const JobCard = props => {
                     >
                         <CardInfo>
                             {/* TODO - Pass Data to the single job page */}
-                            <Link href={id} as={`/jobs/${id}`}>
-                                <a>
                                     <Heading element="h2" type="title2" spaceAfter="small" inverted>{props.title}</Heading>
-                                </a>
-                            </Link>
                             <Stack
                                 flex
                                 direction="row"
@@ -74,6 +73,8 @@ const JobCard = props => {
                         </CardInfo>
                     </Stack>
                 </Card>
+            </a>
+        </Link>
 
     )
 };
