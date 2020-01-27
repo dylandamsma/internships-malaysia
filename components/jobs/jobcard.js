@@ -15,19 +15,17 @@ import { paramCase } from "param-case";
 
 const Card = styled.div`
     position: relative;
-    background-color: #1C1D1F;
+    background-color: rgba(52, 56, 68, 0.29);
     height: auto;
     width: 780px;
-    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.06);
+    // box-shadow: 0 1px 6px 0 rgba(0,0,0,0.06);
     padding: 20px 30px;
     transition: all 300ms ease;
     border-radius: 3px;
     margin-bottom: 25px;
-    top: 0;
 
     & :hover {
-        box-shadow: 0 3px 10px 0 rgba(0,0,0,0.12);
-        top: -3px;
+        background-color: rgba(52, 56, 68, 0.4);
     }
 `;
 
@@ -38,8 +36,6 @@ const CardInfo = styled.div`
 const CompanyLink = styled.a`
 
 `
-
-
 
 const JobCard = props => {
 
