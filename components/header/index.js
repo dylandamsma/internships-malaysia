@@ -11,20 +11,25 @@ import Heading from "@kiwicom/orbit-components/lib/Heading";
 import Stack from '@kiwicom/orbit-components/lib/Stack';
 
 const Wrapper = styled.div`
+    display: flex;
     height: 64px;
     margin-bottom: 50px;
+    // background-color: rgba(22, 22, 26, 0.7);
+    // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: center;
 `;
 
 const Logo = styled.div`
 `
 
 const Menu = styled.div`
+
 `
 
 const Header = props => {
     return (
     <Wrapper>
-        <NavigationBar>
+        {/* <NavigationBar style={`backgroundColor: #020A1C`}> */}
             <Container>
                 <Row justify="space-between">
                     <Stack
@@ -36,7 +41,7 @@ const Header = props => {
                             <Logo>
                                 <Link href="/">
                                     <a>
-                                        <Heading element="div" type="title2">DevJobsMY</Heading>
+                                        <Heading element="div" type="title2" inverted>TechJobsMY</Heading>
                                     </a>
                                 </Link>
                             </Logo>
@@ -64,7 +69,7 @@ const Header = props => {
                     </Stack>
                 </Row>
             </Container>
-        </NavigationBar>
+        {/* </NavigationBar> */}
     </Wrapper>
     )
 };

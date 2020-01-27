@@ -15,7 +15,7 @@ import { paramCase } from "param-case";
 
 const Card = styled.div`
     position: relative;
-    background: white;
+    background: #1C1D1F;
     height: auto;
     width: 270px;
     margin-left: 30px;
@@ -47,7 +47,7 @@ const JobSidebar = props => {
                         justify="start"
                     >
                         <CardInfo>
-                            <Heading element="h2" type="title2" spaceAfter="small">Sidebar</Heading>
+                            <Heading element="h2" type="title2" spaceAfter="small" inverted>Sidebar</Heading>
                             <Text type="secondary" spaceAfter="large"> Here's where company information goes</Text>
                         </CardInfo>
                     </Stack>

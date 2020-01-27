@@ -15,7 +15,7 @@ import { paramCase } from "param-case";
 
 const Card = styled.div`
     position: relative;
-    background: white;
+    background-color: #1C1D1F;
     height: auto;
     width: 780px;
     box-shadow: 0 1px 6px 0 rgba(0,0,0,0.06);
@@ -60,7 +60,7 @@ const JobCard = props => {
                             {/* TODO - Pass Data to the single job page */}
                             <Link href={id} as={`/jobs/${id}`}>
                                 <a>
-                                    <Heading element="h2" type="title2" spaceAfter="small">{props.title}</Heading>
+                                    <Heading element="h2" type="title2" spaceAfter="small" inverted>{props.title}</Heading>
                                 </a>
                             </Link>
                             <Stack

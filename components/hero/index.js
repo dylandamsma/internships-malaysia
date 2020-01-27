@@ -11,6 +11,10 @@ const Wrapper = styled.div`
     margin-bottom: 25px;
 `;
 
+const HeroText = styled.div`
+    text-align: center;
+`
+
 const Hero = props => {
     return (
     <Wrapper>
@@ -22,12 +26,11 @@ const Hero = props => {
                         justify="center"
                         align="center"
                     >
-                        <Heading element="h1" type="display">
-                            Find the perfect internship for you
-                        </Heading>
-                        <Heading element="h2" type="displaySubtitle">
-                            Because being an intern can be awesome.
-                        </Heading>
+                        <HeroText>
+                            <Heading element="h1" type="display" inverted>
+                                We match tech talent with<br /> exciting malaysian ventures
+                            </Heading>
+                        </HeroText>
                     </Stack>
                 </Col>
             </Row>

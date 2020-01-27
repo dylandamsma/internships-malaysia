@@ -16,7 +16,7 @@ import { paramCase } from "param-case";
 
 const Card = styled.div`
     position: relative;
-    background: white;
+    background: #1C1D1F;
     height: auto;
     width: 800px;
     box-shadow: 0 1px 6px 0 rgba(0,0,0,0.06);
@@ -42,7 +42,7 @@ const JobDetails = props => {
 
         <Card>
             <CardInfo>
-                <Heading element="h1" type="title1" spaceAfter="small">{props.title}</Heading>
+                <Heading element="h1" type="title1" spaceAfter="small" inverted>{props.title}</Heading>
                 <Stack
                     flex
                     direction="row"
