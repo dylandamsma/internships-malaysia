@@ -31,7 +31,7 @@ module.exports = {
 								id: record.id,
                                 title: record.get('title'),
                                 slug: record.get('slug'),
-								company: record.get('brand_name'),
+								company: record.get('company'),
 								company_id: record.get('company'),
                                 duration: record.get('duration'),
                                 description: record.get('description'),

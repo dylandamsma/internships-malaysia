@@ -1,6 +1,6 @@
 module.exports = {
     env: {
-      airtableKey: 'keypgQQAJbjW63VAl',
+      airtableKey: 'keyunmctvgB3xM9pM',
       airtableBase: 'appCybbMKxZZay5iw',
       airtablePostsTable: 'posts',
       SITE_URL: 'https://jobsite.now.sh',
