@@ -1,17 +1,11 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import TextLink from '@kiwicom/orbit-components/lib/TextLink';
 import Stack from '@kiwicom/orbit-components/lib/Stack';
 import Heading from '@kiwicom/orbit-components/lib/Heading';
-// import Text from '@kiwicom/orbit-components/lib/Text';
 
 import Suitcase from "@kiwicom/orbit-components/lib/icons/Suitcase";
 import Clock from "@kiwicom/orbit-components/lib/icons/Clock";
-
-import Markdown from 'markdown-to-jsx';
-
-import { paramCase } from "param-case";
 
 import Fade from 'react-reveal/Fade';
 
