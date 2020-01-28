@@ -53,7 +53,8 @@ const Header = props => {
                             <Logo>
                                 <Link href="/">
                                     <a>
-                                        <Heading element="div" type="title2" inverted>TechJobsMY 🇲🇾</Heading>
+                                        {/* <Heading element="div" type="title2" inverted>TechJobsMY 🇲🇾</Heading> */}
+                                        <img src="/images/logo.png" width="165px"/>
                                     </a>
                                 </Link>
                             </Logo>
