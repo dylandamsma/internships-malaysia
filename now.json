@@ -1,0 +1,8 @@
+{
+    "env": {
+      "AIRTABLE_KEY": "@airtable-key",
+      "AIRTABLE_BASE": "@airtable-base",
+      "AIRTABLE_POST_TABLE": "@airtable-post-table",
+      "SITE_URL": "@site-url"
+    }
+  }

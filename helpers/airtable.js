@@ -1,10 +1,10 @@
 const Airtable = require('airtable');
 
 Airtable.configure({
-	apiKey: process.env.airtableKey,
+	apiKey: process.env.AIRTABLE_KEY,
 });
 
-const base = Airtable.base(process.env.airtableBase);
+const base = Airtable.base(process.env.AIRTABLE_BASE);
 
 module.exports = {
 	// Get all Job Posts
