@@ -1,4 +1,5 @@
 {
+  "build": {
     "env": {
       "AIRTABLE_KEY": "@airtable-key",
       "AIRTABLE_BASE": "@airtable-base",
@@ -6,3 +7,4 @@
       "SITE_URL": "@site-url"
     }
   }
+}

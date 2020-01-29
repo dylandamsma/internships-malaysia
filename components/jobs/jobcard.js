@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 import Stack from '@kiwicom/orbit-components/lib/Stack';
 import Heading from '@kiwicom/orbit-components/lib/Heading';
-
 import Suitcase from "@kiwicom/orbit-components/lib/icons/Suitcase";
 import Clock from "@kiwicom/orbit-components/lib/icons/Clock";
+import Badge from "@kiwicom/orbit-components/lib/Badge";
+
+import { Location } from "styled-icons/evil/Location";
 
 import Fade from 'react-reveal/Fade';
 
@@ -31,10 +33,6 @@ const CardInfo = styled.div`
     width: 80%;
 `
 
-const CompanyLink = styled.a`
-
-`
-
 const Text = styled.p`
     color: rgba(255,255,255,0.5);
 
@@ -46,7 +44,6 @@ const Text = styled.p`
 const JobCard = props => {
 
     const id = props.id
-    const permalink = !!id ? `/jobs/${id}` : false
 
     return (
         <Fade bottom>
@@ -79,10 +76,16 @@ const JobCard = props => {
                                     <Suitcase size="small" color="secondary" /> {props.company}
                                 </Text>
                                 <Text>
-                                    <Clock size="small" color="secondary" /> {props.duration} 
+                                    <Location size="20"/> {props.location} 
                                 </Text>
                             </Stack>
                             <Text type="secondary" spaceAfter="large"> {props.short_desc}</Text>
+                            { props.skills && props.skills.map((skill) =>
+                                    <span css={'margin-right: 10px;'}>
+                                        <Badge type="dark">{skill}</Badge> 
+                                    </span>
+                                )
+                            }
                         </CardInfo>
                     </Stack>
                 </Card>

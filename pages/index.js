@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-awesome-styled-grid';
 import JobCard from '../components/jobs/jobcard';
 
 import fetch from 'isomorphic-unfetch';
+import absoluteUrl from 'next-absolute-url'
 
 const Index = props => {
 
@@ -17,9 +18,10 @@ const Index = props => {
           slug={job.slug}
           company={job.company}
           companyid={job.company_id}
-          duration={job.duration}
+          location={job.location}
           description={job.description}
           short_desc={job.short_desc}
+          skills={job.skills}
           featured={job.featured}
       />
 
@@ -39,7 +41,7 @@ const Index = props => {
 }
 
 Index.getInitialProps = async function() {
-  
+
   const basePath =
 		process.env.NODE_ENV === 'development'
 			? `http://localhost:${process.env.PORT || 3000}`

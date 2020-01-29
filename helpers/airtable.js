@@ -26,6 +26,11 @@ module.exports = {
 					(records, fetchNextPage) => {
 						// Get the fields
 						records.forEach(record => {
+
+							base('companies').find(record.get('company'), function(err, comprecord) {
+								if (err) { console.error(err); return; }
+								console.log('Retrieved', comprecord.get('brand_name'));
+							});
 						
 							const post = {
 								id: record.id,
@@ -33,9 +38,10 @@ module.exports = {
                                 slug: record.get('slug'),
 								company: record.get('company'),
 								company_id: record.get('company'),
-                                duration: record.get('duration'),
+                                location: record.get('location'),
                                 description: record.get('description'),
-                                short_desc: record.get('short_description'),
+								short_desc: record.get('short_description'),
+								skills: record.get('skills'),
                                 featured: record.get('featured'),
                                 publish_date: record.get('created_at'),
                                 uuid: record.get('uuid')
