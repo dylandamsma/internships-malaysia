@@ -1,104 +1,102 @@
-const Airtable = require('airtable');
+const Airtable = require('airtable')
 
 Airtable.configure({
-	apiKey: process.env.AIRTABLE_KEY,
-});
+  apiKey: process.env.AIRTABLE_KEY
+})
 
-const base = Airtable.base(process.env.AIRTABLE_BASE);
+const base = Airtable.base(process.env.AIRTABLE_BASE)
+
+const getCompany = record => {
+  return new Promise(async (resolve, reject) => {
+    base('companies').find(record.get('company'), async (err, comprecord) => {
+      if (err) {
+        console.error(err)
+        return
+      }
+      resolve(comprecord)
+    })
+  })
+}
 
 module.exports = {
-	// Get all Job Posts
-	getJobPosts: () => {
+  getJobPosts: () => {
+    const allJobPosts = []
+    return new Promise((resolve, reject) => {
+      base('posts')
+        .select({
+          sort: [
+            {
+              field: 'created_at',
+              direction: 'desc'
+            }
+          ]
+        })
+        .eachPage(
+          async (records, fetchNextPage) => {
+            const result = records.map(async record => {
 
-		return new Promise((resolve, reject) => {
-			const allJobPosts = []
+              const company = await getCompany(record)
 
-			base('posts')
-				.select({
-					sort: [
-						{
-							field: 'created_at',
-							direction: 'desc',
-						},
-					],
-				})
-				.eachPage(
-					(records, fetchNextPage) => {
-						// Get the fields
-						records.forEach(record => {
+              allJobPosts.push({
+                id: record.id,
+                title: record.get('title'),
+                slug: record.get('slug'),
+                location: record.get('location'),
+                description: record.get('description'),
+                short_desc: record.get('short_description'),
+                skills: record.get('skills'),
+                featured: record.get('featured'),
+                publish_date: record.get('created_at'),
+                uuid: record.get('uuid'),
 
-							base('companies').find(record.get('company'), function(err, comprecord) {
-							if (err) { console.error(err); return; }
+                company_id: company.id,
+                company_name: company.get('name'),
+                company_brandname: company.get('randname'),
+                company_logo: company.get('logo')
+              })
+            })
 
-								const company = {
-									id: comprecord.id,
-									company: comprecord.get('name'),
-									brandname: comprecord.get('brand_name'),
-									logo: comprecord.get('logo'),
-									description: comprecord.get('description')
-								}
-							});
-							
-							const post = {
-								id: record.id,
-                                title: record.get('title'),
-                                slug: record.get('slug'),
-								// company: record.get('brand_name'),
-								company_id: record.get('company'),
-                                location: record.get('location'),
-                                description: record.get('description'),
-								short_desc: record.get('short_description'),
-								skills: record.get('skills'),
-                                featured: record.get('featured'),
-                                publish_date: record.get('created_at'),
-                                uuid: record.get('uuid')
-							}
+            // wait for all the posts to get pushed into allJobPosts first
+            await Promise.all(result)
 
-							// Push post to
-							allJobPosts.push(post)
-						})
+            // then only fetch the next page
+            fetchNextPage()
+          },
+          error => {
+            if (error) {
+              console.error(error)
+              reject({ error })
+            }
+            resolve(allJobPosts)
+          }
+        )
+    })
+  },
 
-						fetchNextPage()
-					},
-					error => {
-						if (error) {
-							console.error(error)
-							reject({ error })
-						}
-						resolve(allJobPosts)
-					},
-				)
-		})
-	},
+  // Get a single Job post
+  getJobPost: recordId => {
+    return new Promise((resolve, reject) => {
+      base('posts').find(recordId, (error, record) => {
+        if (error) {
+          console.error(error)
+          reject({ error })
+        }
 
-	// Get a single Job post
-	getJobPost: recordId => {
+        const jobPost = {
+          // id: record.id,
+          title: record.get('title'),
+          slug: record.get('slug'),
+          company: record.get('brand_name'),
+          company_id: record.get('company'),
+          duration: record.get('duration'),
+          description: record.get('description'),
+          featured: record.get('featured'),
+          publish_date: record.get('created_at'),
+          uuid: record.get('uuid')
+        }
 
-		return new Promise((resolve, reject) => {
-			base('posts').find(
-				recordId,
-				(error, record) => {
-					if (error) {
-						console.error(error)
-						reject({ error })
-					}
-
-					const jobPost = {
-						// id: record.id,
-                        title: record.get('title'),
-                        slug: record.get('slug'),
-                        company: record.get('brand_name'),
-						company_id: record.get('company'),
-                        duration: record.get('duration'),
-                        description: record.get('description'),
-                        featured: record.get('featured'),
-                        publish_date: record.get('created_at'),
-                        uuid: record.get('uuid')
-					}
-
-					resolve(jobPost)
-				},
-			)
-		})
-	},
+        resolve(jobPost)
+      })
+    })
+  }
 }
