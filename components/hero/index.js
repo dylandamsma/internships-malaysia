@@ -42,7 +42,7 @@ const Hero = props => {
     return (
     <Wrapper>
         <Container>
-            <Row style={{ height: 400 }} justify="center" align="middle">
+            <Row style={{ height: 450 }} justify="center" align="middle">
                 <Col justify="center" align="center">
                     <Stack 
                         direction="column"
