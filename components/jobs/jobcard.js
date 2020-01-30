@@ -7,7 +7,7 @@ import Suitcase from "@kiwicom/orbit-components/lib/icons/Suitcase";
 import Clock from "@kiwicom/orbit-components/lib/icons/Clock";
 import Badge from "@kiwicom/orbit-components/lib/Badge";
 
-import { Location } from "styled-icons/evil/Location";
+import { LocationOn } from "styled-icons/material/LocationOn";
 
 import Fade from 'react-reveal/Fade';
 
@@ -76,7 +76,7 @@ const JobCard = props => {
                                     <Suitcase size="small" color="secondary" /> {props.company}
                                 </Text>
                                 <Text>
-                                    <Location size="20"/> {props.location} 
+                                    <LocationOn size="18"/> {props.location} 
                                 </Text>
                             </Stack>
                             <Text type="secondary" spaceAfter="large"> {props.short_desc}</Text>

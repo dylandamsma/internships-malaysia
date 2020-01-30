@@ -28,15 +28,22 @@ module.exports = {
 						records.forEach(record => {
 
 							base('companies').find(record.get('company'), function(err, comprecord) {
-								if (err) { console.error(err); return; }
-								console.log('Retrieved', comprecord.get('brand_name'));
+							if (err) { console.error(err); return; }
+
+								const company = {
+									id: comprecord.id,
+									company: comprecord.get('name'),
+									brandname: comprecord.get('brand_name'),
+									logo: comprecord.get('logo'),
+									description: comprecord.get('description')
+								}
 							});
-						
+							
 							const post = {
 								id: record.id,
                                 title: record.get('title'),
                                 slug: record.get('slug'),
-								company: record.get('company'),
+								// company: record.get('brand_name'),
 								company_id: record.get('company'),
                                 location: record.get('location'),
                                 description: record.get('description'),
