@@ -25,7 +25,7 @@ module.exports = {
 				.eachPage(
 					(records, fetchNextPage) => {
 						// Get the fields
-						const company = {}
+						// const company = {}
 
 						records.forEach(record => {
 
@@ -33,14 +33,14 @@ module.exports = {
 								if (err) { console.error(err); return; }
 
 									
-								company['id'] = comprecord.id,
-								company['company'] = comprecord.get('name'),
-								company['brandname'] = comprecord.get('brand_name'),
-								company['logo'] = comprecord.get('logo'),
-								company['description'] = comprecord.get('description')
+								// company['id'] = comprecord.id,
+								// company['company'] = comprecord.get('name'),
+								// company['brandname'] = comprecord.get('brand_name'),
+								// company['logo'] = comprecord.get('logo'),
+								// company['description'] = comprecord.get('description')
 							});
 							
-							console.log(company);
+							// console.log(company);
 
 							const post = {
 								id: record.id,

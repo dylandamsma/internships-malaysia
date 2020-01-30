@@ -51,15 +51,15 @@ const Hero = props => {
                         spaceAfter="large"
                     >
                         <HeroText>
-                            <Fade cascade duration={2500}>
-                            <H4>
-                                CURRENTLY IN DEVELOPMENT 👨‍💻
-                            </H4>
-                            <H1>
-                                Find a tech job in Malaysia<br /> that truly excites you
-                            </H1>
+                            <Fade duration={2500}>
+                                <H4>
+                                    CURRENTLY IN DEVELOPMENT 👨‍💻
+                                </H4>
+                                <H1>
+                                    Find a tech job in Malaysia<br /> that truly excites you
+                                </H1>
+                                <SubscribeForm />
                             </Fade>
-                            <SubscribeForm />
                         </HeroText>
                     </Stack>
                 </Col>

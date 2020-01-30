@@ -1,7 +1,8 @@
 // import Link from 'next/link';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'react-awesome-styled-grid';
+
 import { useForm } from 'react-hook-form'
+import Pulse from 'react-reveal/Pulse';
 
 const Form = styled.form`
     display: flex;
@@ -76,14 +77,15 @@ const SubscribeForm = props => {
 
   return (
     
-    <Form onSubmit={handleSubmit(onSubmit)}>
-        
-      <InputField name="email" type="email" placeholder="> Your email address" ref={register} />
+    // <Pulse count="2" delay="3000">
+        <Form onSubmit={handleSubmit(onSubmit)}>
+            
+        <InputField name="email" type="email" placeholder="> Your email address" ref={register} />
 
-      {/* {errors.exampleRequired && <span>This field is required</span>} */}
-      
-      <Button type="submit" value="Get new Jobs weekly"/>
-    </Form>
+        <Button type="submit" value="Get new Jobs weekly"/>
+
+        </Form>
+    // </Pulse>
   )
 
 };
