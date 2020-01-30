@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Container, Row, Col } from 'react-awesome-styled-grid';
 
 import Stack from '@kiwicom/orbit-components/lib/Stack';
-import Heading from '@kiwicom/orbit-components/lib/Heading';
+import SubscribeForm from '../lib/subscribeForm';
 
 import Fade from 'react-reveal/Fade';
 
@@ -14,6 +14,9 @@ const Wrapper = styled.div`
 `;
 
 const HeroText = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding-bottom: 50px;
 `
@@ -35,10 +38,11 @@ const H4 = styled.h4`
 `
 
 const Hero = props => {
+
     return (
     <Wrapper>
         <Container>
-            <Row style={{ height: 400 }} justify="center" align="middle">
+            <Row style={{ height: 450 }} justify="center" align="middle">
                 <Col justify="center" align="center">
                     <Stack 
                         direction="column"
@@ -47,13 +51,14 @@ const Hero = props => {
                         spaceAfter="large"
                     >
                         <HeroText>
-                            <Fade cascade duration={2500}>
-                            <H4>
-                                CURRENTLY IN DEVELOPMENT 👨‍💻
-                            </H4>
-                            <H1>
-                                Find a tech job in Malaysia<br /> that truly excites you
-                            </H1>
+                            <Fade duration={2500}>
+                                <H4>
+                                    CURRENTLY IN DEVELOPMENT 👨‍💻
+                                </H4>
+                                <H1>
+                                    Find a tech job in Malaysia<br /> that truly excites you
+                                </H1>
+                                <SubscribeForm />
                             </Fade>
                         </HeroText>
                     </Stack>

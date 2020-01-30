@@ -8,6 +8,7 @@ import Clock from "@kiwicom/orbit-components/lib/icons/Clock";
 import Badge from "@kiwicom/orbit-components/lib/Badge";
 
 import { LocationOn } from "styled-icons/material/LocationOn";
+import { Building } from "styled-icons/remix-fill/Building";
 
 import Fade from 'react-reveal/Fade';
 
@@ -72,12 +73,12 @@ const JobCard = props => {
                                 justify="start"
                                 spaceAfter="large"
                             >
-                                <Text>
-                                    <Suitcase size="small" color="secondary" /> {props.company}
-                                </Text>
-                                <Text>
-                                    <LocationOn size="18"/> {props.location} 
-                                </Text>
+                                    <Text>
+                                        <Building size="18" /> {props.company} 
+                                    </Text>
+                                    <Text>
+                                        <LocationOn size="18"/> {props.location} 
+                                    </Text>
                             </Stack>
                             <Text type="secondary" spaceAfter="large"> {props.short_desc}</Text>
                             { props.skills && props.skills.map((skill) =>
