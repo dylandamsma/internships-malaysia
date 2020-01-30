@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { Container, Row, Col } from 'react-awesome-styled-grid';
 
 import Stack from '@kiwicom/orbit-components/lib/Stack';
-import InputField from "@kiwicom/orbit-components/lib/InputField";
-import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink";
+import SubscribeForm from '../lib/subscribeForm';
 
 import Fade from 'react-reveal/Fade';
 
@@ -15,6 +14,9 @@ const Wrapper = styled.div`
 `;
 
 const HeroText = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding-bottom: 50px;
 `
@@ -57,6 +59,7 @@ const Hero = props => {
                                 Find a tech job in Malaysia<br /> that truly excites you
                             </H1>
                             </Fade>
+                            <SubscribeForm />
                         </HeroText>
                     </Stack>
                 </Col>
