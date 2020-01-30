@@ -25,25 +25,28 @@ module.exports = {
 				.eachPage(
 					(records, fetchNextPage) => {
 						// Get the fields
+						const company = {}
+
 						records.forEach(record => {
 
 							base('companies').find(record.get('company'), function(err, comprecord) {
-							if (err) { console.error(err); return; }
+								if (err) { console.error(err); return; }
 
-								const company = {
-									id: comprecord.id,
-									company: comprecord.get('name'),
-									brandname: comprecord.get('brand_name'),
-									logo: comprecord.get('logo'),
-									description: comprecord.get('description')
-								}
+									
+								company['id'] = comprecord.id,
+								company['company'] = comprecord.get('name'),
+								company['brandname'] = comprecord.get('brand_name'),
+								company['logo'] = comprecord.get('logo'),
+								company['description'] = comprecord.get('description')
 							});
 							
+							console.log(company);
+
 							const post = {
 								id: record.id,
                                 title: record.get('title'),
                                 slug: record.get('slug'),
-								// company: record.get('brand_name'),
+								company: 'Test company',
 								company_id: record.get('company'),
                                 location: record.get('location'),
                                 description: record.get('description'),
