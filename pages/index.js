@@ -16,7 +16,7 @@ const Index = props => {
           id={job.id}
           title={job.title}
           slug={job.slug}
-          company={job.company}
+          company={job.company_name}
           companyid={job.company_id}
           location={job.location}
           description={job.description}
